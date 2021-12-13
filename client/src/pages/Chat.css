@@ -1,0 +1,102 @@
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #000000 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+  height: 80vh;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #00000083;
+  border-radius: 0px;
+  border: 2px solid #ffffff00;
+}
+.chatMain {
+  height: 100%;
+  width: 100%;
+  padding: 0 10px;
+  /* background: #000; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.chatMain > div {
+  min-height: 80vh;
+  max-height: 80vh;
+  max-width: 60vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+  display: flex;
+  /* align-items: center; */
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+
+  border-radius: 8px;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.616);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.411);
+}
+.chatMain > section {
+  width: 100%;
+  max-width: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  position: relative;
+}
+.chatMain > section > input {
+  flex: 1;
+  padding: 0 0.5vw;
+  height: 100%;
+  border-radius: 8px;
+}
+.sendBTN {
+  height: 100%;
+  width: 15%;
+  border-radius: 8px;
+  margin-left: 0.3vw;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(15, 11, 75);
+}
+.receivedMSG,
+.sentMSG {
+  width: 100%;
+  display: flex;
+  margin: 0.5vh 0;
+  padding: 0 1vh;
+}
+.receivedMSG {
+  justify-content: flex-end;
+}
+.sentMSG {
+  justify-content: flex-start;
+}
+.receivedMSG > span,
+.sentMSG > span {
+  padding: 0.5vh 2vh;
+  border-radius: 8px;
+  max-width: 80%;
+  width: fit-content;
+  font-size: 1.9vh;
+}
+.receivedMSG > span {
+  background-color: rgba(21, 56, 255, 0.6);
+  color: white;
+}
+.sentMSG > span {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  text-align: right;
+}
